@@ -52,74 +52,19 @@
   </nav>
   <!-- Page Content -->
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1>Input data</h1>
-		</br>
-        <form id="form">
-          <table>
-            <tr>
-              <td>Service name:</td>
-              <td>
-                <input type="text" id="serviceName" />
-              </td>
-            </tr>
-            <tr>
-              <td>Port:</td>
-              <td>
-                <input type="text" id="port" />
-              </td>
-            </tr>
-            <tr>
-              <td>Type:</td>
-              <td>
-                <select id="type">
-				  <option value="">---------Select--------</option>
-                  <option value="HTTP">HTTP</option>
-                  <option value="MySQL">MySQL</option>
-                  <option value="AMQP">AMQP</option>
-                  <option value="JMS">JMS</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                <input type="button" id="add" value="Add" onclick="addRow();reset();" />
-              </td>
-            </tr>
-          </table>
-        </form>
-      </div>
-      <div class="col-lg-12">
-		</br>
-        <h1>View data</h1>
-        <table id="tableData" class="responstable">
-          <tr>
-            <th data-th="Driver details">
-              <b>Service name</b>
-            </th>
-            <th data-th="Driver details">
-              <b>Port</b>
-            </th>
-            <th data-th="Driver details">
-              <b>Type</b>
-            </th>
-            <th data-th="Driver details">Action</th>
-          </tr>
-        </table>
-      </div>
+    <div class="col-lg-12">
+      <h2>ACDA team members:</h2>
+      <ul>
+        <li>Andrei Stoica</li>
+        <li>Alexandru Simion</li>
+        <li>Cristina Mihaila</li>
+        <li>Daniela Neagu</li>
+      </ul>
     </div>
   </div>
   <!-- /.container -->
   <!-- jQuery -->
   <script src="js/jquery.js"></script> 
-  <script type="text/javascript" src="js/services.js"></script> 
-  <script type="text/javascript">
-    document.getElementById('serviceName').value ='';
-    document.getElementById('port').value ='';
-    document.getElementById('type').value ='';
-</script> 
   <!-- Bootstrap Core JavaScript -->
    
   <script src="js/bootstrap.min.js"></script></body>
