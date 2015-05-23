@@ -11,7 +11,7 @@ function addRow() {
     row.insertCell(0).innerHTML= serviceName.value;
     row.insertCell(1).innerHTML= portNumber.value;
 	row.insertCell(2).innerHTML= serviceType.value;
-	row.insertCell(3).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+    row.insertCell(3).innerHTML= '<input type="button" value = "Delete" onClick="Javascript:deleteRow(this)"> <a href="rules.jsp"><button>Edit</button></a>';
 }
 
 function deleteRow(obj) {
