@@ -35,4 +35,10 @@ public class PersistanceServiceImpl implements PersistanceService{
     public List<Rule> getRulesForService(Integer serviceId) {
         return persistanceDao.getRulesForService(serviceId);
     }
+
+    @Override
+    @Transactional
+    public List<Rule> getAllRulesByPort(Integer port) {
+        return persistanceDao.getAllRulesByPort(port);
+    }
 }

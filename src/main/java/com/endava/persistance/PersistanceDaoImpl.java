@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 @Repository
-public class PersistanceDaoImpl implements PersistanceDao{
+public class PersistanceDaoImpl implements PersistanceDao {
 
     private final static Logger logger = LoggerFactory.getLogger(PersistanceDaoImpl.class);
 
@@ -48,6 +48,18 @@ public class PersistanceDaoImpl implements PersistanceDao{
         if(ruleList.size() == 0) {
 
             logger.info("No rules were found for service: " + serviceId);
+            return null;
+        }
+        return ruleList;
+    }
+
+    @Override
+    public List<Rule> getAllRulesByPort(Integer port) {
+
+        List<Rule> ruleList = entityManager.createNamedQuery("getAllRulesByPort", Rule.class).setParameter("port", port).getResultList();
+        if(ruleList.size() == 0) {
+
+            logger.info("No rules were found for port: " + port);
             return null;
         }
         return ruleList;

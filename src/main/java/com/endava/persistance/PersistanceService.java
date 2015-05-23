@@ -13,4 +13,5 @@ public interface PersistanceService {
     public List<MockService> getAllServices();
     public void persistService(MockService service);
     public List<Rule> getRulesForService(Integer serviceId);
+    public List<Rule> getAllRulesByPort(Integer port);
 }

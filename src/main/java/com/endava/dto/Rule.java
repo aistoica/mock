@@ -7,6 +7,9 @@ import java.util.List;
 /**
  * Created by astoica on 5/22/2015.
  */
+@NamedQueries({
+        @NamedQuery(name = "getAllRulesByPort", query = "FROM Rule r WHERE r.service.port = :port")
+})
 @Entity
 @Table(name = "rule")
 public class Rule {
@@ -19,9 +22,6 @@ public class Rule {
     @ManyToOne
     @JoinColumn(name = "serviceId")
     private MockService service;
-
-    @Column(name = "relation")
-    private String relation;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = false)
     @JoinColumn(name = "ruleId")
@@ -50,19 +50,10 @@ public class Rule {
         this.operationList.add(operation);
     }
 
-    public String getRelation() {
-        return relation;
-    }
-
-    public void setRelation(String relation) {
-        this.relation = relation;
-    }
-
     @Override
     public String toString() {
         return "Rule{" +
-                "relation='" + relation + '\'' +
-                ", operationList=" + operationList +
+                "operationList=" + operationList +
                 '}';
     }
 }
