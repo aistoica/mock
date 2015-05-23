@@ -85,7 +85,7 @@
             <tr>
               <td></td>
               <td>
-                <input type="button" id="add" value="Add" onclick="addRow();reset();" />
+                <input type="button" id="add" value="Add" onclick="return validateForm();" />
               </td>
             </tr>
           </table>
